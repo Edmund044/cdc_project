@@ -1,3 +1,81 @@
+<?php
+session_start();
+?>
+<?php
+  $_host = 'localhost';
+  $_username = 'root';
+  $_password = '';
+  $_database = 'cdc';
+  
+  $connection=mysqli_connect($_host,$_username,$_password,$_database);
+if (!$connection) {
+  die("Connection failed:".mysql_connect_error());
+}
+
+if (isset($_POST["submit"])) {
+ $email=$_POST['email'];
+  $pass=$_POST['password'];
+ $cpass=$_POST['cpassword'];
+ $today=date('d-m-Y');
+
+
+ if ($_POST['password']!=$_POST['cpassword']) {?>
+
+   <script> 
+    alert("Password don't match");
+     </script>;
+<?php
+ }
+else{
+ $sqli="SELECT * FROM users WHERE email='".$email."'";
+ $query=mysqli_query($connection,$sqli);
+
+ if ((mysqli_num_rows($query))==0){
+	$sqll="INSERT INTO users(email,password) VALUES('$email','$pass')";
+	$exec = mysqli_query($connection,$sqll);
+ if ($exec)
+        {
+     $sql="SELECT * FROM users WHERE email='$email' AND password='$pass'";
+    $query=mysqli_query($connection,$sql); 
+
+    $number = mysqli_num_rows($query);
+    $rows = mysqli_fetch_assoc($query);
+   
+   
+    if ($number == 1) {
+        $_SESSION["id"] =$rows['id'];
+         $_SESSION["email"] =$rows['email'];
+        header("location:stage.html");
+      
+    }
+        
+    header("location:stage.html");
+
+    
+         }
+     else  {
+          echo "<script >"; 
+     echo "alert('Creating your account was unsuccessful')";
+     echo "</script>";
+
+	 
+       }
+
+ }
+    else
+    {
+          echo "<script >"; 
+     echo "alert('Username already exists')";
+     echo "</script>";
+
+       
+     }
+}
+
+
+
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>

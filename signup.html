@@ -15,20 +15,20 @@
         </div>
         <div class="col-lg-6 position-relative">
           
-          <form class="row g-3 position-absolute top-50 start-20" >
+          <form action="signup.php"  method="POST" class="row g-3 position-absolute top-50 start-20" >
             <h1 class="display-1 text-center"><b>SIGN UP</b></h1>
             <h3 class="text-center text-muted">Know your child’s progress</h3>
             <div class="col-md-12">
               <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4">
+              <input type="email" name="email" class="form-control" id="inputEmail4">
             </div>
             <div class="col-md-12">
               <label for="inputPassword4" class="form-label">Password</label>
-              <input type="password" class="form-control" id="inputPassword4">
+              <input type="password" name="password" class="form-control" id="inputPassword4">
             </div>
             <div class="col-md-12">
               <label for="inputPassword4" class="form-label">Confirm Password</label>
-              <input type="cpassword" class="form-control" id="inputPassword4">
+              <input type="password" name="cpassword" class="form-control" id="inputPassword4">
             </div>
             
            
@@ -36,9 +36,10 @@
             
             <div class="col-12">
               <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary btn-lg rounded-5" type="button">Sign Up</button>
+                <input type="submit" name="submit"  class="btn btn-primary btn-lg rounded-5" value="Sign Up">
               </div>
             </div>
+            <p  class="text-center">Already have an account? <a href="signin.html"> <span class="text-primary">sign in</span></a></p>
           </form>
         </div>
 

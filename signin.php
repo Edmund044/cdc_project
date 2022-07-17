@@ -1,3 +1,45 @@
+<?php
+if (isset($_POST['submit'])) {
+
+
+       
+    $_host = 'localhost';
+    $_username = 'root';
+    $_password = '';
+    $_database = 'cdc';
+    
+    $connection=mysqli_connect($_host,$_username,$_password,$_database);
+if (!$connection) {
+    die("Connection failed:".mysql_connect_error());
+}
+    # Get the values
+     $email=$_POST['email'];
+     $pass=$_POST['password'];
+ 
+
+
+    $sql="SELECT * FROM users WHERE email='$email' AND password='$pass'";
+    $query=mysqli_query($connection,$sql); 
+
+    $number = mysqli_num_rows($query);
+    $rows = mysqli_fetch_assoc($query);
+   
+   
+    if ($number == 1) {
+        $_SESSION["id"] =$rows['USER_ID'];
+    $_SESSION["email"] =$rows['EMAIL'];
+        header("location:stage.html");
+      
+    }else{
+    
+     echo "<script >"; 
+     echo "alert('Unsuccessful login!')";
+     echo "</script>";
+        
+    }
+}
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
