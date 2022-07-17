@@ -29,7 +29,7 @@ if (isset($_POST["submit"])) {
         $yes = 0;
     }
     if(isset($counts['No'])){
-    $no = $counts['No']*10;
+    $no = $counts['No']*2;
     }
     else {
         $no = 0;
