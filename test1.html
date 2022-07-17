@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toddler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<style>
+    .circle{
+        border-radius: 50%;width: 150px;height: 150px;
+    }
+    .circle:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+</style>  
+</head>
+  <body>
+    <nav class="navbar bg-primary">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1 text-light">TODDLER</span>
+        </div>
+      </nav>
+    <div class="container" >
+        <form action="test.php"  method="POST" class="" >
+        <h1 class="h1 text-center"><b>Questions</b></h1>
+        <h3 class="text-center text-muted">Answer the questions below?</h3>
+        <div class="container">
+            <h1 class="h1 text-center"><b>Cognitive cues</b></h1>
+            
+    
+  
+
+            <h3 class="h3">1. Watches you as you move</h3>
+            <input type="radio" id="vehicle1" name="cognitive1" value="Yes">
+            <label for="vehicle1"> Yes</label><br>
+            <input type="radio" id="vehicle2" name="cognitive1" value="Maybe">
+            <label for="vehicle2"> I am not sure</label><br>
+            <input type="radio" id="vehicle3" name="cognitive1" value="No">
+            <label for="vehicle3"> No</label><br>
+            <h3 class="h3">2. Looks at a toy for several seconds</h3>
+            <input type="radio" id="vehicle1" name="cognitive2" value="Yes">
+            <label for="vehicle1"> Yes</label><br>
+            <input type="radio" id="vehicle2" name="cognitive2" value="Maybe">
+            <label for="vehicle2"> I am not sure</label><br>
+            <input type="radio" id="vehicle3" name="cognitive2" value="No">
+            <label for="vehicle3"> No</label><br>
+        </div>
+        <div class="container">
+            <h1 class="h1 text-center"><b>Social cues</b></h1>
+            <h3 class="h3">1. Calms down when spoken to or picked up</h3>
+            <input type="radio" id="vehicle1" name="social1" value="Yes">
+            <label for="vehicle1"> Yes</label><br>
+            <input type="radio" id="vehicle2" name="social1" value="Maybe">
+            <label for="vehicle2"> I am not sure</label><br>
+            <input type="radio" id="vehicle3" name="social1" value="No">
+            <label for="vehicle3"> No</label><br>
+            <h3 class="h3">2. Looks at your face</h3>
+            <input type="radio" id="vehicle1" name="social2" value="Yes">
+            <label for="vehicle1"> Yes</label><br>
+            <input type="radio" id="vehicle2" name="social2" value="Maybe">
+            <label for="vehicle2"> I am not sure</label><br>
+            <input type="radio" id="vehicle3" name="social2" value="No">
+            <label for="vehicle3"> No</label><br>
+            <h3 class="h3">3. Seems happy to see you when you walk up to her</h3>
+            <input type="radio" id="vehicle1" name="social3" value="Yes">
+            <label for="vehicle1"> Yes</label><br>
+            <input type="radio" id="vehicle2" name="social3" value="Maybe">
+            <label for="vehicle2"> I am not sure</label><br>
+            <input type="radio" id="vehicle3" name="social3" value="No">
+            <label for="vehicle3"> No</label><br>
+            <h3 class="h3">4. Smiles when you talk to or smile at her</h3>
+            <input type="radio" id="vehicle1" name="social4" value="Yes">
+            <label for="vehicle1"> Yes</label><br>
+            <input type="radio" id="vehicle2" name="social4" value="Maybe">
+            <label for="vehicle2"> I am not sure</label><br>
+            <input type="radio" id="vehicle3" name="social4" value="No">
+            <label for="vehicle3"> No</label><br>
+        </div>
+        <div class="container">
+            
+    
+   
+    
+
+            <h1 class="h1 text-center"><b>Physical cues</b></h1>
+            <h3 class="h3">1. Holds head up when on tummy</h3>
+            <input type="radio" id="vehicle1" name="physical1" value="Yes">
+            <label for="vehicle1"> Yes</label><br>
+            <input type="radio" id="vehicle2" name="physical1" value="Maybe">
+            <label for="vehicle2"> I am not sure</label><br>
+            <input type="radio" id="vehicle3" name="physical1" value="No">
+            <label for="vehicle3"> No</label><br>
+            <h3 class="h3">2. Moves both arms and both legs</h3>
+            <input type="radio" id="vehicle1" name="physical2" value="Yes">
+            <label for="vehicle1"> Yes</label><br>
+            <input type="radio" id="vehicle2" name="physical2" value="Maybe">
+            <label for="vehicle2"> I am not sure</label><br>
+            <input type="radio" id="vehicle3" name="physical2" value="No">
+            <label for="vehicle3"> No</label><br>
+            <h3 class="h3">3. Opens hands briefly</h3>
+            <input type="radio" id="vehicle1" name="physical3" value="Yes">
+            <label for="vehicle1"> Yes</label><br>
+            <input type="radio" id="vehicle2" name="physical3" value="Maybe">
+            <label for="vehicle2"> I am not sure</label><br>
+            <input type="radio" id="vehicle3" name="physical3" value="No">
+            <label for="vehicle3"> No</label><br>
+        </div>
+        <div class="col-12">
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <input type="submit" name="submit"  class="btn btn-primary btn-lg rounded-5" value="Submit">
+            </div>
+          </div>
+           
+        
+           </form>
+   </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
